@@ -35,19 +35,19 @@ public class Homework_4 {
             if (!result.containsKey(a) && !result.containsValue(b)) {
                 result.put(a, b);
 
-                // цикл для горизонтали
-                for (int j = 0; j <= 8; j++) {
-                    if (combinations.contains(String.format("%d=%d", j, b))) {
-                        combinations.remove(combinations.indexOf(String.format("%d=%d", j, b)));
-                    }
-                }
+                // // цикл для горизонтали
+                // for (int j = 0; j <= 8; j++) {
+                // if (combinations.contains(String.format("%d=%d", j, b))) {
+                // combinations.remove(combinations.indexOf(String.format("%d=%d", j, b)));
+                // }
+                // }
 
-                // цикл для вертикали
-                for (int j = 0; j <= 8; j++) {
-                    if (combinations.contains(String.format("%d=%d", a, j))) {
-                        combinations.remove(combinations.indexOf(String.format("%d=%d", a, j)));
-                    }
-                }
+                // // цикл для вертикали
+                // for (int j = 0; j <= 8; j++) {
+                // if (combinations.contains(String.format("%d=%d", a, j))) {
+                // combinations.remove(combinations.indexOf(String.format("%d=%d", a, j)));
+                // }
+                // }
 
                 // цикл для диагонали вправо-вниз
                 for (int j1 = 0; j1 <= Math.min(8 - a, 8 - b); j1++) {
@@ -92,8 +92,8 @@ public class Homework_4 {
         Map<Integer, Integer> result = find8Queens();
         System.out.println(result);
         for (int i = 1; i <= 8; i++) {
-            ArrayList<Integer> table = new ArrayList<>(Arrays.asList(0, 0, 0, 0, 0, 0, 0));
-            table.add(result.get(i) - 1, 1);
+            ArrayList<String> table = new ArrayList<>(Arrays.asList("▢", "▢", "▢", "▢", "▢", "▢", "▢"));
+            table.add(result.get(i) - 1, "♕");
             System.out.println(table.toString().replace(",", "").replace("[", "").replace("]", ""));
         }
     }

@@ -1,7 +1,6 @@
 /*
  Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь несколько телефонов.
  */
-
 package Lesson_5;
 
 import java.util.*;
@@ -23,7 +22,6 @@ public class Homework_1 {
         addPhonebook("Петров", 456);
         addPhonebook("Смирнов", 234);
         addPhonebook("Сидоров", 917);
-
         System.out.println(phonebook);
     }
 }
